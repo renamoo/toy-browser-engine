@@ -1,4 +1,4 @@
-# toy browser engine
+# Toy Browser Engine
 To understand the how browser engine works.  
 
 # Special Thanks
