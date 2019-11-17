@@ -1,3 +1,5 @@
+import { Display } from "./layout-tree-builder";
+
 export class Node {
   children: Node[];
   nodeType: string = 'Element';
@@ -50,5 +52,13 @@ export class StyledNode {
     this.node = node;
     this.specifiedValues = specifiedValues;
     this.children = children;
+  }
+
+  getAttr(name: string) {
+    return this.specifiedValues.get(name);
+  }
+
+  getDisplay(): string {
+    return this.getAttr('display') as string || Display.NONE;
   }
 }
